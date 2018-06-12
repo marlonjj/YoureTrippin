@@ -45,6 +45,18 @@ module.exports = function(app) {
         })
     })
 
+    //Delete a trip
+    app.delete("/api/trips/:id", function(req, res) {
+        db.Trip.destroy({
+          where: {
+            id: req.params.id
+          }
+        })
+          .then(function(dbTrip) {
+            res.json(dbTrip);
+          });
+      });
+
     //Get schedule for trip
     app.get("/api/schedule", function(req, res){
         db.Schedule.findAll({where: {
