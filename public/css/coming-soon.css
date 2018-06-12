@@ -2,7 +2,6 @@ html {
     height: 100%;
   }
   
-  h1,
   h2,
   h3,
   h4,
@@ -18,6 +17,7 @@ html {
     position: relative;
     font-family: 'Source Sans Pro';
     font-weight: 300;
+    
   }
   
   .overlay {
@@ -29,7 +29,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    opacity: 0.75;
+    
     z-index: -1;
   }
   
@@ -54,7 +54,8 @@ html {
     width: 100%;
     min-height: 35rem;
     height: 100%;
-    background-color: rgba(0, 46, 102, 0.8);
+    background-color: #212529;
+    opacity:  0.8;
     transform: skewY(4deg);
     transform-origin: bottom right;
   }
@@ -125,7 +126,7 @@ html {
   }
 
   p {
-      color:black;
+      color:#fdb515;
       text-align: center !important;
   }
 
