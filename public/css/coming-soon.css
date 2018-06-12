@@ -40,7 +40,7 @@ html {
   }
   
   .masthead {
-    /* position: absolute; */
+    position: absolute;
     overflow: hidden;
     padding-bottom: 3rem;
   }
@@ -126,13 +126,19 @@ html {
 
   p {
       color:black;
+      text-align: center !important;
   }
 
 .form-signin .form-control{
 height: 25px !important;
 
-width: 440px !important;
+width: 380px !important;
 
 font-size: 14px !important;
 
+}
+
+.signup, .signin {
+  margin: auto;
+  width: 200px;
 }
