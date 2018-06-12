@@ -708,3 +708,56 @@ ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
     background-color: #fed136;
 }
+
+
+/* Displays information for next 5 days */
+
+.day-name,
+#iconOne,
+#iconTwo,
+#iconThree,
+#iconFour,
+#iconFive,
+#dayOneMax,
+#dayTwoMax,
+#dayThreeMax,
+#dayFourMax,
+#dayFiveMax,
+#dayOneMin,
+#dayTwoMin,
+#dayThreeMin,
+#dayFourMin,
+#dayFiveMin {
+    display: inline-table;
+    height: 50px;
+}
+
+.page2-card {
+    margin-top: 15px;
+}
+
+img {
+    margin-top: 15px;
+}
+
+.com {
+    float: left;
+    width: 20%;
+    padding: 20%;
+}
+
+.col1 {
+    color: blue;
+}
+
+.col2 {
+    background: lightblue;
+}
+
+.col3 {
+    background: indigo;
+}
+
+.wrapper {
+    display: flex;
+}
