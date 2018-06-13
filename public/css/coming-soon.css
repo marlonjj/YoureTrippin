@@ -155,3 +155,13 @@ p {
     margin: auto;
     width: 200px;
 }
+
+.schedule-align{
+    margin-top:150px;
+   
+}
+
+.schedule{
+    font-family: "Montserrat",'Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* background-color: #212529; */
+}
