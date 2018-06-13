@@ -52,7 +52,7 @@ html {
     top: 0;
     bottom: 0;
     right: 0;
-    right: 55%;
+    right: 50%;
     width: 100%;
     min-height: 35rem;
     height: 100%;
@@ -154,5 +154,5 @@ font-size: 14px !important;
 .info-align {
   position: relative;
   margin-top:100px;
-  margin-left:50px;
+  margin-left:80px;
 }
