@@ -1,25 +1,20 @@
 module.exports = function(sequelize, DataTypes) {
     var Trip = sequelize.define("Trip", {
-      userID: {
-        type: DataTypes.INT,
-        allowNull: false,
-      },
-      destination: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 140]
+        destination: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1, 140]
+            }
+        },
+        dateStart: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        dateEnd: {
+            type: DataTypes.STRING,
+            allowNull: true,
         }
-      },
-      dateStart: {
-        type: DataTypes.STRING,
-        allowNull: true,        
-      },
-      dateEnd: {
-        type: DataTypes.STRING,
-        allowNull: true,        
-      }
     });
     return Trip;
-  };
-  
+};
