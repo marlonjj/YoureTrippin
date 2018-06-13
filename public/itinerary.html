@@ -26,59 +26,70 @@
 
 <body>
 
+    <!-- Shows background -->
     <div class="overlay2"></div>
-
-    <div class="masthead">
-
-        <div class="container_schedule">
-            <!-- <div class="row h-100"> -->
-            <div class="col-12">
-                <div class="col-12 align-items-center justify-content-center flex-column">
-                    <div class="card" id="create_activity_card">
-                        <div class="col-12align-items-center justify-content-center card-body">
-                            <form id="create_activity_form">
-                                <p class="h1 text-center">Schedule</p>
-
-                                <div class="md-form">
-                                    <h5>Start Time<input type="text" name="start_time" class="form-control validate" placeholder="Enter start time of activity, example 09:00"></h5>
-                                </div>
-
-                                <div class="md-form">
-                                    <h5>End Time<input type="text" name="end_time" class="form-control validate" placeholder="Enter end time of activity, example 11:00"></h5>
-                                </div>
-
-                                <div class="md-form">
-                                    <h5>Title<input type="text" name="text" class="form-control validate" placeholder="Enter activity"></h5>
-                                </div>
-
-                                <div class="md-form">
-                                    <h5>Description<input id="pac-input" type="text" class="form-control validate" placeholder="Enter description"></h5>
-                                </div>
-
-                                <div class="md-form">
-                                    <h5>Id<input type="text" name="place_id" class="form-control validate" placeholder="Place Id" id="place-id"></h5>
-                                </div>
-
-                                <div class="text-center py-4 mt-3">
-                                    <button class="btn btn-success" type="submit">Submit</button>
+    <!-- Container for schedule and to do  -->
+    <div class="container col-12 col-md-12">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="card" id="create_schedule_card">
+                    <form id="create_schedule_form">
+                        <p class="h1 text-center">Schedule</p>
+                        <div class="form">
+                            <h5>Title<input type="text" name="text" class="form-control validate" placeholder="Enter activity"></h5>
+                        </div>
+                        <div class="form">
+                            <h5>Description<input type="text" class="form-control validate" placeholder="Enter description"></h5>
+                        </div>
+                        <div class="form">
+                            <h5>Start Time<input type="text" name="start_time" class="form-control validate" placeholder="Optional, Enter start time of activity, example 09:00"></h5>
+                        </div>
+                        <div class="form">
+                            <h5>End Time<input type="text" name="end_time" class="form-control validate" placeholder="Optional, Enter end time of activity, example 11:00"></h5>
+                        </div>
+                        <!-- <div class="md-form">
+                                        <h5>Id<input type="text" name="place_id" class="form-control validate" placeholder="Place Id" id="place-id"></h5>
+                                    </div> -->
+                        <div class="text-center py-4 mt-3">
+                            <button class="btn btn-success" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <ul class="list-group todo-list">
+                        <li class="list-group-item new-item">
+                            <form id="todo-form">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="new-item form-control" placeholder="Add a todo" type="text" />
+                                        </div>
+                                        <div class="col-2">
+                                            <button type="submit" class="btn btn-success">Add Todo</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
-                        </div>
-                    </div>
+                        </li>
+                        <span class="todo-container"> </span>
+                    </ul>
                 </div>
-
             </div>
-
         </div>
     </div>
+
+
+
 
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/vide/jquery.vide.min.js"></script>
+
+    <script src="js/view.js" type="text/javascript"></script>
 
 
 
