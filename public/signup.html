@@ -39,13 +39,13 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ml-auto">
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#services">Vacation</a>
+                <a class="nav-link js-scroll-trigger" href="vacation.html">Vacation</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="itinerary.html">Schedule</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">Activities</a>
+                <a class="nav-link js-scroll-trigger" href="activities.html">Activities</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
@@ -67,18 +67,18 @@
         <div class="form-group">
           <div class="form-row">
             <div class="col">
-              <input type="text" class="form-control" placeholder="First name">
+              <input type="text" class="form-control" placeholder="First name" id="firstName" required="">
             </div>
             <div class="col">
-              <input type="text" class="form-control" placeholder="Last name">
+              <input type="text" class="form-control" placeholder="Last name" id="lastName" required="">
             </div>
           </div>
         </div>
         <div class="form-group">
-          <input type="username" class="form-control" id="exampleInputUsername" aria-describedby="userHelp" placeholder="Enter Username">
+          <input type="username" class="form-control" id="exampleInputEmail" aria-describedby="userHelp" placeholder="Enter email address" required="">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required="">
         </div>
         <h2>Select your preferences!</h2> 
         <div class="form-check form-check-inline">
@@ -106,10 +106,10 @@
             <label class="form-check-label" for="inlineCheckbox2">Nightlife</label>
         </div>
         
-      </form>
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
+      </form>
+      
     </div>
   </div>
 </div>
@@ -127,6 +127,67 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+
+    <script type="text/javascript">
+
+      // Capture the form inputs
+      $("#submit").on("click", function(event) {
+      event.preventDefault();
+  
+      // Form validation
+      function validateForm() {
+          var isValid = true;
+          $(".form-control").each(function() {
+          if ($(this).val() === "") {
+              isValid = false;
+          }
+          });
+  
+          $(".chosen-select").each(function() {
+  
+          if ($(this).val() === "") {
+              isValid = false;
+          }
+          });
+          return isValid;
+      }
+  
+      // If all required fields are filled
+      if (validateForm() == true) {
+          // Create an object for the user"s data
+          var userData = {
+          firstName: $("#firstName").val().trim(),
+          lastName:$("#lastName").val().trim(),
+          email:$("#exampleInputEmail").val().trim(),
+          password: $("exampleInputPassword1").val().trim(),
+          preferences: [
+              $("#inlineCheckbox1").val(),
+              $("#inlineCheckbox2").val(),
+              $("#inlineCheckbox3").val(),
+              $("#inlineCheckbox4").val(),
+              $("#inlineCheckbox5").val(),
+          ]
+          };
+  
+          
+  
+          // // AJAX post the data to the friends API.
+          // $.post("/api/friends", userData, function(data) {
+          //     console.log(userData);
+  
+          // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          // $("#match-name").text(data.name);
+          // $("#match-img").attr("src", data.photo);
+  
+          // // Show the modal with the best match
+          // $("#results-modal").modal();
+  
+          // });
+      } else {
+          alert("Please fill out all fields before submitting!");
+      }
+      });
+  </script>
 
 </body>
 
