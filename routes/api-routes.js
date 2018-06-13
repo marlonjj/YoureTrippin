@@ -3,14 +3,15 @@ var db = require("../models");
 module.exports = function(app) {
 
     //See if login info matches a user
-    app.get("/api/login", function(req, res){
+    app.post("/api/login", function(req, res){
         db.User.findOne({where: {
             username: req.body.username,
             password: req.body.password
         }}).then(function(dbUser){
+            console.log("dbUser ====> ", dbUser);
             res.json(dbUser);
-        })
-    })
+        });
+    });
 
     //Register User for site
     app.post("/api/register", function(req, res){
@@ -21,29 +22,29 @@ module.exports = function(app) {
             lastName: req.body.lastName
           }).then(function(dbUser){
             res.json(dbUser);
-        })
-    })
+        });
+    });
 
     //Get trips for user
-    app.get("/api/trips/:id", function(req, res){
+    app.get("/api/trips/:userID", function(req, res){
         db.Trip.findAll({where: {
-            userID: req.params.id
+            userID: req.params.userID
         }}).then(function(dbTrip){
             res.json(dbTrip);
-        })
-    })
+        });
+    });
 
     //Add new trip for user
-    app.post("/api/trips/:id", function(req, res){
+    app.post("/api/trips/:userID", function(req, res){
         db.Trip.create({
-            userId: req.params.id,
+            userID: req.params.userID,
             destination: req.body.destination,
             dateStart: req.body.dateStart,
             dateEnd: req.body.dateEnd
         }).then(function(dbTrip){
             res.json(dbTrip);
-        })
-    })
+        });
+    });
 
     //Delete a trip
     app.delete("/api/trips/:id", function(req, res) {
@@ -63,8 +64,8 @@ module.exports = function(app) {
             tripID: req.body.tripID
         }}).then(function(dbSchedule){
             res.json(dbSchedule);
-        })
-    })
+        });
+    });
 
     //Add to schedule for trip
     app.post("/api/schedule", function(req, res){
@@ -75,8 +76,8 @@ module.exports = function(app) {
             time: req.body.dateTime
         }).then(function(dbSchedule){
             res.json(dbSchedule);
-        })
-    })
+        });
+    });
 
     //Edit item in schedule
     app.put("/api/schedule", function(req, res) {
@@ -104,4 +105,4 @@ module.exports = function(app) {
       });
 
 
-}
+};
