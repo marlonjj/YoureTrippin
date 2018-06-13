@@ -1,9 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var Trip = sequelize.define("Trip", {
-      userID: {
-        type: DataTypes.INT,
-        allowNull: false,
-      },
       destination: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -13,13 +9,12 @@ module.exports = function(sequelize, DataTypes) {
       },
       dateStart: {
         type: DataTypes.STRING,
-        allowNull: true,        
+        allowNull: true,
       },
       dateEnd: {
         type: DataTypes.STRING,
-        allowNull: true,        
+        allowNull: true,
       }
     });
     return Trip;
   };
-  
