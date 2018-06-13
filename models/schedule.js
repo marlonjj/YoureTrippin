@@ -15,7 +15,11 @@ module.exports = function(sequelize, DataTypes) {
         type: DataTypes.TEXT,
         allowNull: true,
       },
-      time: {
+      startTime: {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+      endTime: {
         type: DataTypes.STRING,
         allowNull: true
       }

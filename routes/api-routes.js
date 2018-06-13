@@ -25,18 +25,18 @@ module.exports = function(app) {
     })
 
     //Get trips for user
-    app.get("/api/trips", function(req, res){
+    app.get("/api/trips/:id", function(req, res){
         db.Trip.findAll({where: {
-            userID: req.body.userID
+            userID: req.params.id
         }}).then(function(dbTrip){
             res.json(dbTrip);
         })
     })
 
     //Add new trip for user
-    app.post("/api/trips", function(req, res){
+    app.post("/api/trips/:id", function(req, res){
         db.Trip.create({
-            userId: req.body.id,
+            userId: req.params.id,
             destination: req.body.destination,
             dateStart: req.body.dateStart,
             dateEnd: req.body.dateEnd
