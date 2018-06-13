@@ -82,32 +82,32 @@
         </div>
         <h2>Select your preferences!</h2> 
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="landmarks">
             <label class="form-check-label" for="inlineCheckbox1">Landmarks</label>
           </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="arts">
           <label class="form-check-label" for="inlineCheckbox2">Arts & Entertainment</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="active">
             <label class="form-check-label" for="inlineCheckbox3">Active Life</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="shopping">
             <label class="form-check-label" for="inlineCheckbox4">Shopping</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option2">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="food">
           <label class="form-check-label" for="inlineCheckbox5">Food</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option2">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="nightlife">
             <label class="form-check-label" for="inlineCheckbox6">Nightlife</label>
         </div>
         
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit"  id="register" class="btn btn-primary">Submit</button>
       </form>
       
     </div>
@@ -127,13 +127,14 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-
+    <script src="js/signup.js"></script>
     <script type="text/javascript">
 
       // Capture the form inputs
       $("#submit").on("click", function(event) {
       event.preventDefault();
   
+      console.log("yeet");
       // Form validation
       function validateForm() {
           var isValid = true;
@@ -149,26 +150,7 @@
       // If all required fields are filled
       if (validateForm() == true) {
           // Create an object for the user"s data
-          var userData = {
-          firstName: $("#firstName").val().trim(),
-          lastName:$("#lastName").val().trim(),
-          email:$("#exampleInputEmail").val().trim(),
-          password: $("exampleInputPassword1").val().trim(),
-          preferences: [
-              $("#inlineCheckbox1").val(),
-              $("#inlineCheckbox2").val(),
-              $("#inlineCheckbox3").val(),
-              $("#inlineCheckbox4").val(),
-              $("#inlineCheckbox5").val(),
-          ]
-          };
-  
-          
-  
-          // // AJAX post the data to the friends API.
-          // $.post("/api/friends", userData, function(data) {
-          //     console.log(userData);
-  
+          console.log("true");
           // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           // $("#match-name").text(data.name);
           // $("#match-img").attr("src", data.photo);

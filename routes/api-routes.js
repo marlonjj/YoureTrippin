@@ -16,12 +16,12 @@ module.exports = function(app) {
     //Register User for site
     app.post("/api/register", function(req, res){
         db.User.create({
-            username: req.body.user.username,
-            password: req.body.user.password,
-            firstName: req.body.user.firstName,
-            lastName: req.body.user.lastName
+            username: req.body.username,
+            password: req.body.password,
+            first_name: req.body.firstName,
+            last_name: req.body.lastName,
+            preferences: req.body.preferences
           }).then(function(dbUser){
-              console.log(req.body);
             res.json(dbUser);
         });
     });
