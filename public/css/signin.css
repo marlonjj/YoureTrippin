@@ -142,6 +142,10 @@ p {
   width: 150px;
 }
 
+.signin {
+  margin-bottom: 15px;
+}
+
 .signin_logo {
   height:170px;
   width: 410px;
@@ -149,6 +153,5 @@ p {
 
 .info-align {
   position: relative;
-  margin-top:100px;
   margin-left:80px;
 }

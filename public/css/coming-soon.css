@@ -158,11 +158,12 @@ p {
 
 .schedule-align{
     margin-top:150px;
+    color:#fdb515;
 }
 
 .schedule{
     font-family: "Montserrat",'Helvetica Neue',Helvetica,Arial,sans-serif;
-    background-color: #212529;
+
 }
 
 .schedule-pad {
@@ -176,3 +177,9 @@ p {
     font-weight: 700;
 
 }
+
+.form-color{
+    background-color: rgba(33,37,41,0.85);
+ 
+}
+
