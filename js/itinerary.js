@@ -12,7 +12,7 @@ $(".create_schedule_card").on("submit", function(event){
         endTime: $("#end").val().trim()
     }
 
-    app.post("/api/trips", schedItem, function(){
+    app.post("/api/schedule", schedItem, function(){
 
     })
 })
