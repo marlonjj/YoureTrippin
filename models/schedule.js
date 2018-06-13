@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var Schedule = sequelize.define("Schedule", {
       tripID: {
-        type: DataTypes.INT,
+        type: DataTypes.INTEGER,
         allowNull: false
       },
       title: {
