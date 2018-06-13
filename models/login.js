@@ -27,6 +27,10 @@ module.exports = function(sequelize, DataTypes) {
         validate: {
           len: [1, 40]
         }
+      },
+      preferences: {
+        type: DataTypes.TEXT,
+        allowNull: true
       }
     });
     return User;

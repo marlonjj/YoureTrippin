@@ -13,8 +13,13 @@ $(".signup_form").on("submit", function handleFormSubmit(event){
         username: $("#exampleInputEmail").val().trim(),
         password: $("#exampleInputPassword1").val().trim()
     }
-
-    $.post("/api/register", newUser, function() {
-
-    })
+    
+    registerUser(newUser);
 })
+
+function registerUser(user){
+    $.post("/api/register", newUser, function() {
+        window.location.href = "/login";
+        })
+    })
+}
