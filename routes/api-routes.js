@@ -16,11 +16,12 @@ module.exports = function(app) {
     //Register User for site
     app.post("/api/register", function(req, res){
         db.User.create({
-            username: req.body.username,
-            password: req.body.password,
-            firstName: req.body.firstName,
-            lastName: req.body.lastName
+            username: req.body.user.username,
+            password: req.body.user.password,
+            firstName: req.body.user.firstName,
+            lastName: req.body.user.lastName
           }).then(function(dbUser){
+              console.log(req.body);
             res.json(dbUser);
         });
     });
@@ -35,7 +36,7 @@ module.exports = function(app) {
     });
 
     //Add new trip for user
-    app.post("/api/trips/:userID", function(req, res){
+    app.post("/api/trips/", function(req, res){
         db.Trip.create({
             userID: req.params.userID,
             destination: req.body.destination,
