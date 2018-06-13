@@ -20,6 +20,5 @@ $(".signup_form").on("submit", function handleFormSubmit(event){
 function registerUser(user){
     $.post("/api/register", newUser, function() {
         window.location.href = "/login";
-        })
     })
 }
