@@ -25,7 +25,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body id="page-top">
+    <body class="background">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -53,24 +53,161 @@
         </div>
       </div>
     </nav>
+       
+    <br>
+    <img src="img/logos/white.png" class="imageLogo">
+    <br>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="form_container">
+        <form class="signup_form">
+        <h1>Search Location</h1>
+        <div class="form-group">
+            <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name" id="firstName" required="">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name" id="lastName" required="">
+            </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="username" class="form-control" id="exampleInputEmail" aria-describedby="userHelp" placeholder="Enter email address" required="">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required="">
+        </div>
+        <h2>Select your preferences!</h2> 
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Landmarks</label>
+            </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Arts & Entertainment</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Active Life</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Shopping</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Food</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Nightlife</label>
+        </div>
+        
+        <br>
+        <button type="submit" class="btn btn-primary">Add a trip</button>
+        <br>
+        <button type="submit" class="btn btn-primary">See all existing trips</button>
+
+        </form>
+        
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+    <script type="text/javascript">
+
+        // Capture the form inputs
+        $("#submit").on("click", function(event) {
+        event.preventDefault();
+    
+        // Form validation
+        function validateForm() {
+            var isValid = true;
+            $(".form-control").each(function() {
+            if ($(this).val() === "") {
+                isValid = false;
+            }
+            });
+    
+            $(".chosen-select").each(function() {
+    
+            if ($(this).val() === "") {
+                isValid = false;
+            }
+            });
+            return isValid;
+        }
+    
+        // If all required fields are filled
+        if (validateForm() == true) {
+            // Create an object for the user"s data
+            var userData = {
+            firstName: $("#firstName").val().trim(),
+            lastName:$("#lastName").val().trim(),
+            email:$("#exampleInputEmail").val().trim(),
+            password: $("exampleInputPassword1").val().trim(),
+            preferences: [
+                $("#inlineCheckbox1").val(),
+                $("#inlineCheckbox2").val(),
+                $("#inlineCheckbox3").val(),
+                $("#inlineCheckbox4").val(),
+                $("#inlineCheckbox5").val(),
+            ]
+            };
+    
+            
+    
+            // // AJAX post the data to the friends API.
+            // $.post("/api/friends", userData, function(data) {
+            //     console.log(userData);
+    
+            // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            // $("#match-name").text(data.name);
+            // $("#match-img").attr("src", data.photo);
+    
+            // // Show the modal with the best match
+            // $("#results-modal").modal();
+    
+            // });
+        } else {
+            alert("Please fill out all fields before submitting!");
+        }
+        });
+    </script>
 
    
   
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
-      <!-- Plugin JavaScript -->
-      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  
-      <!-- Contact form JavaScript -->
-      <script src="js/jqBootstrapValidation.js"></script>
-      <script src="js/contact_me.js"></script>
-  
-      <!-- Custom scripts for this template -->
-      <script src="js/agency.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
   
     </body>
   
-  </html>
+</html>
   
