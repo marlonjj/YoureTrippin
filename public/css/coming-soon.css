@@ -2,6 +2,7 @@ html {
     height: 100%;
   }
   
+ 
   h2,
   h3,
   h4,
@@ -55,7 +56,7 @@ html {
     min-height: 35rem;
     height: 100%;
     background-color: #212529;
-    opacity:  0.8;
+    opacity:  0.85;
     transform: skewY(4deg);
     transform-origin: bottom right;
   }

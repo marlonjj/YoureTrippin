@@ -1,0 +1,59 @@
+.overlay {
+  position: absolute;
+  margin:auto;
+  bottom:0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  }
+
+.fix{
+  height:70px;
+  width: 210px;
+  top:350px;
+}
+
+.image-sizing {
+  width: 350px;
+  height: 250px;
+}
+
+.card-sizing {
+  height:250px;
+
+}
+
+.btnText{
+    color:white;
+}
+.background{
+    background-image: url("../img/logos/travel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top:120px;
+    height: 100%;
+    width: 100%;
+}
+
+img.imageLogo{
+    height: 150px; 
+    width: 430px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.signup_form{
+    width:50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.submitBtn{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
