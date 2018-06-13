@@ -12,6 +12,7 @@ html {
     color:#fdb515;
     text-align:center;
     font-weight:700;
+    width:410px;
   }
   
   body {
@@ -128,6 +129,7 @@ html {
   p {
       color:#fdb515;
       text-align: center !important;
+      width:410px;
   }
 
 .form-signin .form-control{
@@ -152,5 +154,5 @@ font-size: 14px !important;
 .info-align {
   position: relative;
   margin-top:100px;
-  
+  margin-left:50px;
 }
