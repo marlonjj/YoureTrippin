@@ -167,12 +167,21 @@
       font-size: 1.25em;
       padding: 12px 0;
     }
+
   }
   
   header.masthead {
     text-align: center;
     color: white;
     background-image: url("../img/header-bg.jpg");
+
+}
+
+header.masthead {
+    text-align: center;
+    color: white;
+    background-image: url("../img/logos/peru_image.jpg");
+
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -180,6 +189,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
   }
   
   .masthead .masthead-bg {
@@ -197,6 +207,11 @@
   }
   
   header.masthead .intro-text {
+
+}
+
+header.masthead .intro-text {
+
     padding-top: 150px;
     padding-bottom: 100px;
   }
@@ -719,4 +734,61 @@
   
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
     background-color: #fed136;
+
   }
+
+}
+
+
+/* Displays information for next 5 days
+
+.day-name,
+#iconOne,
+#iconTwo,
+#iconThree,
+#iconFour,
+#iconFive,
+#dayOneMax,
+#dayTwoMax,
+#dayThreeMax,
+#dayFourMax,
+#dayFiveMax,
+#dayOneMin,
+#dayTwoMin,
+#dayThreeMin,
+#dayFourMin,
+#dayFiveMin {
+    display: inline-table;
+    height: 50px;
+}
+
+.page2-card {
+    margin-top: 15px;
+}
+
+img {
+    margin-top: 15px;
+}
+
+.com {
+    float: left;
+    width: 20%;
+    padding: 20%;
+}
+
+.col1 {
+    color: blue;
+}
+
+.col2 {
+    background: lightblue;
+}
+
+.col3 {
+    background: indigo;
+}
+
+.wrapper {
+    display: flex;
+} */
+
