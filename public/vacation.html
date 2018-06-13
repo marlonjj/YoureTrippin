@@ -74,7 +74,7 @@
         </div>
         <br>
         <div>
-        <button type="submit" class="btn btn-primary">See all existing trips</button>
+        <button type="button" class="btn btn-primary">See all existing trips</button>
         </div>
 
         </form>
@@ -125,17 +125,7 @@
         if (validateForm() == true) {
             // Create an object for the user"s data
             var userData = {
-            firstName: $("#firstName").val().trim(),
-            lastName:$("#lastName").val().trim(),
-            email:$("#exampleInputEmail").val().trim(),
-            password: $("exampleInputPassword1").val().trim(),
-            preferences: [
-                $("#inlineCheckbox1").val(),
-                $("#inlineCheckbox2").val(),
-                $("#inlineCheckbox3").val(),
-                $("#inlineCheckbox4").val(),
-                $("#inlineCheckbox5").val(),
-            ]
+            Location: $("#location").val().trim(),
             };
     
             
