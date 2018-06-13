@@ -38,6 +38,17 @@
     text-align:center;
 }
 
+.background2{
+    background-image: url("../img/logos/coloseum.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top:120px;
+    height: 100%;
+    width: 100%;
+    text-align:center;
+}
+
 img.imageLogo{
     height: 150px; 
     width: 400px;
@@ -58,4 +69,18 @@ img.imageLogo{
     left: 50%;
     transform: translate(-50%);
     padding:25px;
+}
+
+.activity-bkgd{
+    background-image: url("../img/logos/prague.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    text-align:center;
+}
+
+.bg-light{
+    background-color: transparent !important;
 }
