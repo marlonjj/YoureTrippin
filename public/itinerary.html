@@ -14,17 +14,51 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'> -->
 
     <!-- Custom styles for this template -->
     <link href="css/coming-soon.css" rel="stylesheet">
+    <link href="css/agency.min.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="schedule">
+<!-- Navigation Tab -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="home.html">You're Trippin'</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Vacation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="itinerary.html">Schedule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="activities.html">Activities</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <div class="overlay2"></div>
 
@@ -32,12 +66,12 @@
 
         <div class="container_schedule">
             <!-- <div class="row h-100"> -->
-            <div class="col-12">
+            <div class="col-12 schedule-align">
                 <div class="col-12 align-items-center justify-content-center flex-column">
                     <div class="card" id="create_activity_card">
-                        <div class="col-12align-items-center justify-content-center card-body">
+                        <div class="col-12align-items-center justify-content-center card-body schedule-color">
                             <form id="create_activity_form">
-                                <p class="h1 text-center">Schedule</p>
+                                <h1 class="text-center">Schedule</h1>
 
                                 <div class="md-form">
                                     <h5>Start Time<input type="text" name="start_time" class="form-control validate" placeholder="Enter start time of activity, example 09:00"></h5>
