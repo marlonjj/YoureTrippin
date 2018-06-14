@@ -61,9 +61,10 @@ module.exports = function(app) {
 
     //Get schedule for trip
     app.get("/api/schedule", function(req, res){
-        db.Schedule.findAll({where: {
-            id: req.body.id
-        }}).then(function(dbSchedule){
+        db.Schedule.findAll(
+            // {where: {
+            // id: req.body.id
+        ).then(function(dbSchedule){
             res.json(dbSchedule);
         });
     });
