@@ -12,9 +12,9 @@ $(document).ready(function(){
       if(response.id){
         sessionStorage.setItem("currentUser", response.id);
       }
-      
+
     }).then(function(){
       window.location.href = "/vacation";
-    })
+    });
   });
 });
