@@ -40,63 +40,37 @@ $("#submitBtn").on("click", function(event) {
         var deleteBtn = $("<button>");
         deleteBtn.text("X");
         deleteBtn.addClass("delete btn btn-danger");
+        deleteBtn.attr("data-id", response.id)
         var editBtn = $("<button>");
         editBtn.text("EDIT");
         editBtn.addClass("edit btn btn-info");
+        deleteBtn.attr("data-id", response.id)
         $(".todo-list").append(newLine);
         $(newLine).append(deleteBtn);
         $(newLine).append(editBtn);
     });
 
-    $(".delete").on("click", function(event){
+    $("body").on("click", ".delete", function(event){
         event.stopPropagation();
         console.log($(this).data)
         var id = $(this).data("id");
         $.ajax({
             method: "DELETE",
-            url: "/api/schedule/:id" 
+            url: "/api/schedule/" +id 
     }).then(getList());
     });
-          // $(document).on("click", "button.delete", deleteTodo);
-    // $(document).on("click", "button.complete", toggleComplete);
-    // $(document).on("click", ".todo-item", editTodo);
-    // $(document).on("keyup", ".todo-item", finishEdit);
-    // $(document).on("blur", ".todo-item", cancelEdit);
-    // $(document).on("submit", "#todo-form", insertTodo);
-
-    // var list=[];
-
-    // getList();
-
-    // function initializeList() {
-    //     $(".todo-list").empty();
-    //     var rowsToAdd=[];
-    //     for (var i=0; i < list.length; i++) {
-    //         rowsToAdd.push(createNewRow(list[i]));
-    //     }
-    //     $(".todo-list").prepend(rowsToAdd);
-    // }
-
-    // function getList() {
-    //     $.get("/api/schedule", function(data) {
-    //         list = data;
-    //         initializeList();
-    //     });
-    // }
-
-        // function updateSchedule() {
-        //     $.ajax({
-        //         method: "PUT",
-        //         url: "/api/schedule",
-        //         data: todo
-        //     }).then(getSchedule);
-        // }
-        // $.get()
-
-        // $.put("/api/schedule", schedItem).then(function)
-
-        // $.delete()
-
+ 
+    $("body").on("click", ".edit", function(event){
+        event.stopPropagation();
+        console.log($(this).data)
+        var id = $(this).data("id");
+        $.ajax({
+            method: "DELETE",
+            url: "/api/schedule/" +id 
+    }).then(getList());
+    });
+ 
+    
      
 });
 
