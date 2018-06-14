@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
     var Schedule = sequelize.define("Schedule", {
       tripID: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: true
       },
       title: {
         type: DataTypes.STRING,

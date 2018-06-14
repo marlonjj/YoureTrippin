@@ -62,7 +62,7 @@ module.exports = function(app) {
     //Get schedule for trip
     app.get("/api/schedule", function(req, res){
         db.Schedule.findAll({where: {
-            tripID: req.body.tripID
+            id: req.body.id
         }}).then(function(dbSchedule){
             res.json(dbSchedule);
         });
@@ -71,7 +71,7 @@ module.exports = function(app) {
     //Add to schedule for trip
     app.post("/api/schedule", function(req, res){
         db.Schedule.create({
-            tripID: req.body.id,
+            id: req.body.id,
             title: req.body.title,
             body: req.body.body,
             time: req.body.dateTime
