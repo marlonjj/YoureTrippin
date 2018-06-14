@@ -8,8 +8,8 @@ module.exports = function(app) {
             username: req.body.username,
             password: req.body.password
         }}).then(function(dbUser){
-            console.log("dbUser ====> ", dbUser);
             res.json(dbUser);
+            // console.log(dbUser);
         });
     });
 
