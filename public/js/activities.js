@@ -7,9 +7,9 @@
 // var data = "Berkeley";
 var trilogy = "KKiNRjRhj75tLTYACCUbfSU4hQYniEjuRq55MIQmVE0EigMGnCpsy2jNEB13aD-hGDrNTqmj0m5w7rPuqiuhJolp4dPKXeZcgSoN84fTPvT8GhyIeFSvUi8BMQ8gW3Yx";
 var landmarks = function(data) {
-  var queryURL = "https://api.yelp.com/v3/search?location=berkeley&categories=landmarks&apikey="+trilogy;
+  var queryURL = "api.yelp.com/v3/search?location=berkeley&categories=landmarks&apikey="+trilogy;
   $.ajax({
-    url: queryURL,
+    url: "https://cors-anywhere.herokuapp.com/" + queryURL,
     method: "GET"
   }).then(function(response) {
     console.log(response);
