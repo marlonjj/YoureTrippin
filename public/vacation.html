@@ -130,17 +130,11 @@
 
 
             // // AJAX post the data to the friends API.
-<<<<<<< HEAD
-            // $.post("/api/friends", userData, function(data) {
-            //     console.log(userData);
-
-=======
             $.post("/api/trips", tripData, function(data) {
                 console.log(tripData);
             }).then(function(){
               $("#location").val('');
             });
->>>>>>> 87038ad883efe37d4edd3cf06bd396b396c39681
             // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             // $("#match-name").text(data.name);
             // $("#match-img").attr("src", data.photo);
