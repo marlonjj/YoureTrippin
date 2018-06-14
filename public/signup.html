@@ -26,7 +26,7 @@
     <link href="css/style.css" rel="stylesheet">
 
   </head>
-      
+
 <body class="background">
      <!-- Navigation -->
      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -80,7 +80,7 @@
         <div class="form-group">
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required="">
         </div>
-        <h2>Select your preferences!</h2> 
+        <h2>Select your preferences!</h2>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="landmarks">
             <label class="form-check-label" for="inlineCheckbox1">Landmarks</label>
@@ -105,11 +105,11 @@
             <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="nightlife">
             <label class="form-check-label" for="inlineCheckbox6">Nightlife</label>
         </div>
-        
+
         <br>
         <button type="submit"  id="register" class="btn btn-primary">Submit</button>
       </form>
-      
+
     </div>
   </div>
 </div>
@@ -117,6 +117,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -133,7 +134,7 @@
       // Capture the form inputs
       $("#submit").on("click", function(event) {
       event.preventDefault();
-  
+
       console.log("yeet");
       // Form validation
       function validateForm() {
@@ -143,10 +144,10 @@
               isValid = false;
           }
           });
-  
+
           return isValid;
       }
-  
+
       // If all required fields are filled
       if (validateForm() == true) {
           // Create an object for the user"s data
@@ -154,10 +155,10 @@
           // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           // $("#match-name").text(data.name);
           // $("#match-img").attr("src", data.photo);
-  
+
           // // Show the modal with the best match
           // $("#results-modal").modal();
-  
+
           // });
       } else {
           alert("Please fill out all fields before submitting!");
