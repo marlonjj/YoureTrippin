@@ -1,4 +1,4 @@
-# [You're Trippin']
+# You're Trippin'
 
 [You're Trippin'](https://github.com/marlonjj/YoureTrippin) is a travel website where users can create their own "dream vacation" by making a user profile, and make plans in our schedule feature.
 
