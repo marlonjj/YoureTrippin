@@ -8,8 +8,8 @@ module.exports = function(app) {
             username: req.body.username,
             password: req.body.password
         }}).then(function(dbUser){
-            console.log("dbUser ====> ", dbUser);
             res.json(dbUser);
+            // console.log(dbUser);
         });
     });
 
@@ -38,7 +38,7 @@ module.exports = function(app) {
     //Add new trip for user
     app.post("/api/trips/", function(req, res){
         db.Trip.create({
-            userID: req.params.userID,
+            userID: req.body.userID,
             destination: req.body.destination,
             dateStart: req.body.dateStart,
             dateEnd: req.body.dateEnd
