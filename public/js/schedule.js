@@ -18,31 +18,8 @@ $("#submitBtn").on("click", function(event) {
     $("#end").val('')
 
     $.post("/api/schedule", schedItem).then(function(response) {
-        // console.log(response);
         displayList();
-        // var newLine = $(`<li class="list-group-item new-item form-color appendBtn">${response.title}</li>`)
-        // var deleteBtn = $("<button>");
-        // deleteBtn.text("X");
-        // deleteBtn.addClass("delete btn btn-danger");
-        // deleteBtn.attr("data-id", response.id)
-        // var editBtn = $("<button>");
-        // editBtn.text("EDIT");
-        // editBtn.addClass("edit btn btn-info");
-        // deleteBtn.attr("data-id", response.id)
-        // $(".todo-list").append(newLine);
-        // $(newLine).append(deleteBtn);
-        // $(newLine).append(editBtn);
     });
-
-    // $("body").on("click", ".delete", function(event){
-    //     event.stopPropagation();
-    //     console.log($(this).data)
-    //     var id = $(this).data("id");
-    //     $.ajax({
-    //         method: "DELETE",
-    //         url: "/api/schedule/" +id 
-    // }).then(getList());
-    // });
  
     // $("body").on("click", ".edit", function(event){
     //     $.ajax({
@@ -51,8 +28,6 @@ $("#submitBtn").on("click", function(event) {
     //         data: list
     // }).then(getList());
     // });
- 
-    
      
 });
 
@@ -97,13 +72,13 @@ function getList() {
 function createNewRow(list) {
     var $newInputRow = $(
         [
-            "<li class='list-group-item todo-item'>",
+            "<li class='list-group-item new-item form-color appendBtn'>",
             "<span>",
             list.title,
             "</span>",
             "<input type='text' class='edit' style='display: none;'>",
             "<button class='delete btn btn-danger'>x</button>",
-            "<button class='complete btn btn-primary'>✓</button>",
+            "<button class='complete btn btn-info'>✓</button>",
             "</li>"
         ].join("")
     );
