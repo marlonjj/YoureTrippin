@@ -1,5 +1,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var yelp = require('yelp-fusion');
+
+var client = yelp.client("bu035b3uE5ZUNzWwPOXgmcnA4sleX72DgkjWyVWNepb0c8DIvUbVk_0ixH5Vr_B6cJ_XX0NMdj60lG7CUKviT8B532Ie7IfhM4JzunMvhHT97Vhx7dv_wvFi-bUiW3Yx");
 
 // Sets up the Express App
 // =============================================================

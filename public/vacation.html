@@ -58,7 +58,7 @@
     <img src="img/logos/white.png" class="imageLogo">
     <br>
     <div class="container">
-    <div class="row">
+    <div class="row" id="trips">
     <div class="col-md-12">
         <div class="form_container">
         <form class="signup_form">
@@ -70,11 +70,11 @@
 
 
         <div>
-        <button type="submit" class="btn btn-primary">Add a trip</button>
+        <button type="button" id="submit" class="btn btn-primary">Add a trip</button>
         </div>
         <br>
         <div>
-        <button type="button" class="btn btn-primary">See all existing trips</button>
+        <button type="button" id="showTrips" class="btn btn-primary">See all existing trips</button>
         </div>
 
         </form>
@@ -118,16 +118,29 @@
         // If all required fields are filled
         if (validateForm() == true) {
             // Create an object for the user"s data
-            var userData = {
-            Location: $("#location").val().trim(),
+            var id = parseInt(sessionStorage.currentUser);
+            console.log(id);
+            var tripData = {
+              userID: id,
+              destination: $("#location").val().trim(),
+              dateStart: null,
+              dateEnd: null
             };
 
 
 
             // // AJAX post the data to the friends API.
+<<<<<<< HEAD
             // $.post("/api/friends", userData, function(data) {
             //     console.log(userData);
 
+=======
+            $.post("/api/trips", tripData, function(data) {
+                console.log(tripData);
+            }).then(function(){
+              $("#location").val('');
+            });
+>>>>>>> 87038ad883efe37d4edd3cf06bd396b396c39681
             // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
             // $("#match-name").text(data.name);
             // $("#match-img").attr("src", data.photo);
@@ -140,6 +153,25 @@
             alert("Please fill out all fields before submitting!");
         }
         });
+
+        $("#showTrips").on("click", function(event) {
+          event.preventDefault();
+
+          $.get("/api/trips/" + sessionStorage.currentUser, function(response){
+            response.forEach(function(index){
+              var div = "<div style='margin-top: 5px' class='col-md-12'><button type='button' class='tripForward btn btn-primary' " +
+                "data-id=" +index.id+ " >" + index.destination + "</button></div>"
+              $("#trips").append(div);
+            })
+          })
+        });
+
+        $('body').on("click", ".tripForward", function(event){
+          event.preventDefault();
+
+          sessionStorage.setItem("currentTrip", $(this).data('id'));
+          window.location.href = "/itinerary";
+        })
     </script>
 
 
