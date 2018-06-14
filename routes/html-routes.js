@@ -12,13 +12,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
-<<<<<<< HEAD
-=======
-  app.get("/activities", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/activities.html"));
-  });
-
->>>>>>> 9fa104c959c2e4f710f0097ed69e9ffde5cd2936
   app.get("/vacation", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/vacation.html"));
   });

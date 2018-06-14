@@ -10,8 +10,7 @@ $(document).ready(function(){
     $.post('/api/login', user).then(function(response){
       console.log(response);
       if(response.id){
-        localStorage.setItem("currentUser", response.id);
-        // window.location.href = "/vacation"
+        sessionStorage.setItem("currentUser", response.id);
       }
       
     }).then(function(){

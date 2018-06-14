@@ -1,5 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     var Trip = sequelize.define("Trip", {
+      userID: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       destination: {
         type: DataTypes.STRING,
         allowNull: false,

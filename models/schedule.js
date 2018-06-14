@@ -1,9 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     var Schedule = sequelize.define("Schedule", {
-      // tripID: {
-      //   type: DataTypes.INTEGER,
-      //   allowNull: false
-      // },
+      tripID: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
       title: {
         type: DataTypes.STRING,
         allowNull: false,
