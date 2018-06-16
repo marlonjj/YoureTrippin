@@ -1,6 +1,6 @@
 # You're Trippin'
 
-[You're Trippin'](https://github.com/marlonjj/YoureTrippin) is a travel website where users can create their own "dream vacation" by making a user profile, and make plans in our schedule feature. Here is a link to our app deployed on heroku: [(https://frozen-headland-52337.herokuapp.com/)](https://frozen-headland-52337.herokuapp.com/)
+[You're Trippin'](https://github.com/marlonjj/YoureTrippin) is a travel website where users can create their own "dream vacation" by making a user profile, and make plans in our schedule feature.
 
 ## Preview
 
@@ -21,6 +21,9 @@ You're Trippin' is a user-focused web application where users will create an acc
 
 ## Search Location Demo
 [![Search Location Demo](https://media.giphy.com/media/1BgqEjTdbcYzpl1kXo/giphy.gif)](https://media.giphy.com/media/1BgqEjTdbcYzpl1kXo/giphy.gif)
+
+## The Motivation behind the project
+We were inspired by the various other travel websites, but felt it was limited for users. Most travel websites felt too curated on what a tourist "should" do and not what their personal interests are. To remedy this, we thought adding a personal itinerary where users can create their own schedule and set their own times would give users more freedom. Though having an open-ended schedule creation tool would be too much freedom for some, so we also included an activities page for them to browse through. The activities page is split up into six unique categories, which would narrow down the choices the user has and let them decide what their dream vacation looks like.
 
 ## Technology Used
 - HTML 5
