@@ -1,6 +1,7 @@
 # You're Trippin'
 
-[You're Trippin'](https://github.com/marlonjj/YoureTrippin) is a travel website where users can create their own "dream vacation" by making a user profile, and make plans in our schedule feature.
+[You're Trippin'](https://github.com/marlonjj/YoureTrippin) is a travel website where users can create their own "dream vacation" by making a user profile, and make plans in our schedule feature. Here is a link to our deployed app:[(https://frozen-headland-52337.herokuapp.com/)](https://frozen-headland-52337.herokuapp.com/)
+
 
 ## Preview
 
